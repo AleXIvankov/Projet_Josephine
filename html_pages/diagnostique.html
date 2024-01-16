@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aide au Diagnostique</title>
+    <link
+      rel="icon"
+      type="images/x-icon"
+      href="../img/favicon_io/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../img/favicon_io//apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../img/favicon_io//favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../img/favicon_io//favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/diagnostique.css" />
+    <script src="../scripts/diagnostique.js" defer></script>
+  </head>
+  <body>
+    <wrapper class="wrapper">
+      <header class="header">
+        <a class="logo" href="../index.html">
+          <img
+            class="logo_img"
+            src="../img/logo-fms-no-background 1.svg"
+            alt=""
+          />
+        </a>
+        <a href="../index.html"> <button class="btn">&lt; retour</button></a>
+      </header>
+      <div class="container">
+        <div class="frame1 section">
+          <div class="card1">
+            <a href="#popup" class="popup-link"
+              ><h3>&lt; Mauvaise rotation des cages /></h3></a
+            >
+          </div>
+          <div class="card2"></div>
+          <div class="card3"></div>
+          <h2>ST 36</h2>
+        </div>
+
+        <div class="frame2 section">
+          <div class="card1">
+            <a href="#popup_4" class="popup-link"
+              ><h3>&lt; Rebuts vissage /></h3></a
+            >
+          </div>
+          <div class="card2"></div>
+          <div class="card3"></div>
+          <h2>ST 38</h2>
+        </div>
+
+        <div class="frame3 section">
+          <div class="card1"></div>
+          <div class="card2"></div>
+          <div class="card3"></div>
+          <h2>ST 36</h2>
+        </div>
+
+        <div class="frame4 section">
+          <div class="card1"></div>
+          <div class="card2"></div>
+          <div class="card3"></div>
+          <h2>ST 36</h2>
+        </div>
+
+        <div class="frame5 section">
+          <div class="card1"></div>
+          <div class="card2"></div>
+          <div class="card3"></div>
+          <h2>ST 36</h2>
+        </div>
+      </div>
+    </wrapper>
+    <!-- popups st36 (0 - 2) -->
+    <div id="popup" class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <a href="#" class="popup__close close-popup">&#215;</a>
+          <div class="popup__text">
+            <p>
+              1: Vérifier la conformité des cages
+              <br />
+              2: Vérifier la conformité des bornes
+              <br />
+              3: Vérifier si les vis, goupilles, butées ne dépassent pas de
+              l'imprunte
+            </p>
+            <br />
+            <h4>Est-ce que le problème a été résolu?</h4>
+            <div class="popup_btn">
+              <a href="#popup_99" class="popup-link">
+                <button class="popup_btn1">oui</button>
+              </a>
+              <a href="#popup_2" class="popup-link">
+                <button class="popup_btn2">non</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup_2" class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <a href="#" class="popup__close close-popup">&#215;</a>
+          <div class="popup__text">
+            <p>
+              4: Vérifier s'il y a de l'air sur les vérins
+              <br />
+              5: Vérifier le fonctionnement et position des guides du rail
+              mobile
+              <br />
+              6: Démagnetiser la pince de prise des cages
+            </p>
+            <br />
+            <div class="img">
+              <img src="../img/diag_img/st36_img/example.svg" alt="" />
+            </div>
+            <h4>Est-ce que le problème a été résolu?</h4>
+            <div class="popup_btn">
+              <a href="#popup_99" class="popup-link">
+                <button class="popup_btn1">oui</button>
+              </a>
+              <a href="#popup_3" class="popup-link">
+                <button class="popup_btn2">non</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup_3" class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <a href="#" class="popup__close close-popup">&#215;</a>
+          <div class="popup__text">
+            <p>
+              7: Vérifier le bon fonctionnement la rotation de la pince(vérin)
+              <br />
+              8: Vérifier la positiion du moteur d'axe à la prise et à la dépose
+              de la cage
+              <br />
+            </p>
+            <br />
+            <h4>Est-ce que le problème a été résolu?</h4>
+            <div class="popup_btn">
+              <a href="#popup_99" class="popup-link">
+                <button class="popup_btn1">oui</button>
+              </a>
+              <a href="contact.html" target="_blank">
+                <button class="popup_btn2">non</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- popup 99 -->
+    <div id="popup_99" class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <a href="#" class="popup__close close-popup">&#215;</a>
+          <div class="popup__text">
+            <h2>Bravo!</h2>
+          </div>
+          <div class="cat_gif">
+            <img src="../img/diag_img/popup99/cat-cats.gif" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- popups st38 -->
+
+    <div id="popup_4" class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <a href="#" class="popup__close close-popup">&#215;</a>
+          <div class="popup__text">
+            <p>
+              1: Vérifier la conformité des cages et vis
+              <br />
+              2: Vérifier l'embout de vissage
+              <br />
+              3: Vérifier que la cage est bien maintenu et en bonne position
+            </p>
+            <br />
+            <h4>Est-ce que le problème a été résolu?</h4>
+            <div class="popup_btn">
+              <a href="#popup_99" class="popup-link">
+                <button class="popup_btn1">oui</button>
+              </a>
+              <a href="#popup_5" class="popup-link">
+                <button class="popup_btn2">non</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup_5" class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <a href="#" class="popup__close close-popup">&#215;</a>
+          <div class="popup__text">
+            <p>
+              4: Vérifier fonctionnement du capteur de couple
+              <br />
+              5: Vérifier que le plateau est en bon etat (machoires, joints
+              toriques)
+              <br />
+              6: Vérifier l'etat des galets d'ecartement bague de couple
+              <br />
+              7: Reinitialiser Axe de broche
+            </p>
+            <br />
+            <h4>Est-ce que le problème a été résolu?</h4>
+            <div class="popup_btn">
+              <a href="#popup_99" class="popup-link">
+                <button class="popup_btn1">oui</button>
+              </a>
+              <a href="contact.html" target="_blank">
+                <button class="popup_btn2">non</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
