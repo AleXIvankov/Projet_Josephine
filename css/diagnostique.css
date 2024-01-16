@@ -1,0 +1,316 @@
+:root {
+  --index: calc(1vw + 1vh);
+}
+body.lock {
+  overflow: hidden;
+  font-weight: 400;
+  font-size: calc(var(--index) * 0.8);
+}
+
+wrapper {
+  position: absolute;
+  height: 200%;
+  width: 100%;
+
+  align-items: center;
+  justify-content: center;
+  background-color: #151515;
+  background-size: cover;
+}
+wrapper .header {
+  max-width: 70rem;
+  width: 100%;
+  margin: 25px auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: white;
+}
+.header img {
+  height: 15vh;
+  width: 25vh;
+}
+wrapper .header .btn {
+  margin-top: 1rem;
+  padding: 0.2rem 0.4rem;
+  background-image: linear-gradient(135deg, #a5a5a5 0%, #868788 80%);
+  border: solid 1px;
+  border-radius: 25px;
+  color: #151515;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+}
+wrapper .header .btn:hover {
+  transition: 0.6s;
+  box-shadow: 0 0 0.1rem #f3f8f3, 0 0 0.4rem #f3f8f3, 0 0 2rem #f3f8f3;
+}
+wrapper .container {
+  position: relative;
+  justify-content: space-around;
+}
+wrapper .container .frame1 {
+  position: relative;
+  height: 20vh;
+  width: 100%;
+  background-color: rgb(68, 20, 43);
+  border: solid 1px;
+  border-radius: 2%;
+}
+wrapper .container .frame1:hover {
+  transition: 0.6s;
+  height: 30vh;
+  background-image: url(../img/diag_img/st36_img/fond_st36.svg);
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+}
+wrapper .container .frame2 {
+  position: relative;
+  height: 20vh;
+  width: 100%;
+  background-color: rgb(6, 24, 60);
+  border: solid 1px;
+  border-radius: 2%;
+}
+wrapper .container .frame2:hover {
+  transition: 0.6s;
+  height: 30vh;
+  background-image: url(../img/diag_img/st38_img/fond_st38.svg);
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+}
+wrapper .container .frame3 {
+  position: relative;
+  height: 20vh;
+  width: 100%;
+  background-color: rgb(54, 12, 79);
+  border: solid 1px;
+  border-radius: 2%;
+}
+wrapper .container .frame3:hover {
+  transition: 0.6s;
+  height: 30vh;
+  background-color: rgb(124, 26, 180);
+  opacity: 1;
+}
+wrapper .container .frame4 {
+  position: relative;
+  height: 20vh;
+  width: 100%;
+  background-color: rgb(12, 76, 26);
+  border: solid 1px;
+  border-radius: 2%;
+}
+wrapper .container .frame4:hover {
+  transition: 0.5s;
+  height: 30vh;
+  background-color: rgb(26, 180, 59);
+  opacity: 1;
+}
+wrapper .container .frame5 {
+  position: relative;
+  height: 20vh;
+  width: 100%;
+  background-color: rgb(13, 42, 82);
+  border: solid 1px;
+  border-radius: 2%;
+}
+wrapper .container .frame5:hover {
+  transition: 0.5s;
+  height: 30vh;
+  background-color: rgb(26, 90, 180);
+  opacity: 1;
+  transform-style: preserve-3d;
+}
+
+.section {
+  perspective: 1000px;
+  text-align: center;
+  font-size: calc((1vh + 1vw) * 2);
+  justify-content: space-around;
+}
+
+.card1,
+.card2,
+.card3 {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 5%;
+  padding-top: 10px;
+  transition: 0.8s;
+  transform: translateY(100%);
+  background-color: transparent;
+  text-align: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  font-size: calc((1vh + 1vw) * 0.8);
+}
+.section:hover .card1,
+.section:hover .card2,
+.section:hover .card3 {
+  transform: translateY(1vh) rotateY(-15deg);
+  background-color: #f3f8f3;
+  border-radius: 1rem 1rem 0 0;
+  border: solid 1px #151515;
+  box-shadow: 10px 10px 20px 0 rgb(26, 90, 180, 0.4);
+}
+
+.card1 {
+  width: calc(var(--index) * 12);
+  height: 10vh;
+  left: 10%;
+  bottom: 0;
+  transition-delay: 0.2s;
+  z-index: 3;
+}
+.card1:hover {
+  scale: 1.2;
+  z-index: 4;
+}
+.card2 {
+  width: calc(var(--index) * 13);
+  height: 12vh;
+  left: 15%;
+  bottom: 0;
+  transition-delay: 0.3s;
+  z-index: 2;
+}
+.card2:hover {
+  scale: 1.2;
+  z-index: 4;
+}
+.card3 {
+  width: calc(var(--index) * 14);
+  height: 14vh;
+  left: 20%;
+  bottom: 0;
+  transition-delay: 0.4s;
+  z-index: 1;
+}
+.card3:hover {
+  scale: 1.2;
+  z-index: 4;
+}
+
+a {
+  text-decoration: none;
+
+  font-size: calc(var(--index) * 0.65);
+  color: #6e0000;
+}
+
+/* popup */
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(21, 21, 21, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup.open .popup__content {
+  transform: perspective(1000px) translate(0px, 0px) rotateX(0deg);
+  opacity: 1;
+}
+.popup__area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.popup__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+.popup__content {
+  position: relative;
+  background-color: #f3f8f3;
+  color: #151515;
+  max-width: 800px;
+  padding: 30px;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  transform: perspective(1000px) translate(0px, -100%) rotateX(45deg);
+}
+.popup__close {
+  position: absolute;
+  right: 0.4rem;
+  top: 0.1rem;
+  font-size: calc((1vh + 1vw) * 2);
+  text-decoration: none;
+  color: #1515157c;
+}
+.popup__text {
+  font-size: calc((1vh + 1vw) * 0.8);
+  margin: 0 0 1em 0;
+}
+.popup_btn {
+  position: relative;
+  width: 400px;
+  max-height: 200px;
+
+  justify-content: space-between;
+  align-items: center;
+}
+.popup_btn1 {
+  position: relative;
+  margin-top: 1rem;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  padding: 0.2rem 0.5rem;
+  background-color: #0d9b00;
+  opacity: 0.8;
+  border: none;
+  border-radius: calc(var(--index) * 10);
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.popup_btn2 {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  padding: 0.2rem 0.5rem;
+  background-color: #a02a2a;
+  opacity: 0.8;
+  border: none;
+  border-radius: calc(var(--index) * 10);
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+img {
+  position: relative;
+  width: 250px;
+  height: auto;
+}
+
+h2 {
+  font-size: calc(var(--index) * 2);
+}
+.cat_gif {
+  position: relative;
+  width: 250px;
+  height: auto;
+}
