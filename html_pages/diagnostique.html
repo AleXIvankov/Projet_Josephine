@@ -28,19 +28,22 @@
     />
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/diagnostique.css" />
+    <script type="text/javascript" src="../libs/jquery-3.7.1.min.js"></script>
     <script src="../scripts/diagnostique.js" defer></script>
   </head>
   <body>
     <wrapper class="wrapper">
       <header class="header">
-        <a class="logo" href="../index.html">
+        <a class="logo transition" href="../index.html">
           <img
             class="logo_img"
             src="../img/logo-fms-no-background 1.svg"
             alt=""
           />
         </a>
-        <a href="../index.html"> <button class="btn">&lt; retour</button></a>
+        <a href="../index.html" class="transition">
+          <button class="btn">&lt; retour</button></a
+        >
       </header>
       <div class="container">
         <div class="frame1 section">
@@ -246,5 +249,23 @@
         </div>
       </div>
     </div>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("body").css("display", "none");
+
+        $("body").fadeIn(800);
+
+        $("a.transition").click(function (event) {
+          event.preventDefault();
+          linkLocation = this.href;
+          $("body").fadeOut(500, redirectPage);
+        });
+
+        function redirectPage() {
+          window.location = linkLocation;
+        }
+      });
+    </script>
   </body>
 </html>

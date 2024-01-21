@@ -28,6 +28,7 @@
     />
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/pages.css" />
+    <script type="text/javascript" src="../libs/jquery-3.7.1.min.js"></script>
   </head>
   <body>
     <div class="wrapper_contact">
@@ -59,5 +60,23 @@
         </secton>
       </main>
     </div>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("body").css("display", "none");
+
+        $("body").fadeIn(800);
+
+        $("a").click(function (event) {
+          event.preventDefault();
+          linkLocation = this.href;
+          $("body").fadeOut(500, redirectPage);
+        });
+
+        function redirectPage() {
+          window.location = linkLocation;
+        }
+      });
+    </script>
   </body>
 </html>

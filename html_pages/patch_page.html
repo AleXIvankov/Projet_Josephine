@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page travaux</title>
     <link rel="stylesheet" href="../css/reset.css" />
+    <script type="text/javascript" src="../libs/jquery-3.7.1.min.js"></script>
   </head>
   <body>
     <main>
@@ -45,5 +46,22 @@
         </h2>
       </div>
     </main>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // $("body").css("display", "none");
+
+        $("body").fadeIn(800);
+
+        $("a").click(function (event) {
+          event.preventDefault();
+          linkLocation = this.href;
+          $("body").fadeOut(700, redirectPage);
+        });
+
+        function redirectPage() {
+          window.location = linkLocation;
+        }
+      });
+    </script>
   </body>
 </html>
